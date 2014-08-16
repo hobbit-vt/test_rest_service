@@ -1,0 +1,13 @@
+{
+  "name": "rest_service",
+  "description": "Rest service",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "jasmine-node": "*"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "node_modules/.bin/jasmine-node test/"
+  }
+}
