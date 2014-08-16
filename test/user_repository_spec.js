@@ -28,7 +28,9 @@ describe('User repository', function(){
 
   it('should log out', function(){
 
-    userRepo.logout(token);
+    expect(userRepo.logout(token)).toBeTruthy();
+    expect(userRepo.logout(token)).toBeFalsy();
+    
     expect(userRepo._loggedUser[token]).toBeUndefined();
     expect(userRepo.validateToken(token)).toBeFalsy();
   });

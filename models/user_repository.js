@@ -73,10 +73,14 @@ User.prototype = {
    */
   logout: function(token){
 
+    var result = false;
+
     if (this._loggedUser[token]) {
 
+      result = true;
       delete this._loggedUser[token];
     }
+    return result;
   }
 };
 
