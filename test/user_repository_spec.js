@@ -4,16 +4,6 @@ var token;
 
 describe('User repository', function(){
 
-  it('should generate unique token', function(){
-
-    var token1 = userRepo._generateToken();
-    var token2 = userRepo._generateToken();
-    var token3 = userRepo._generateToken();
-
-    expect(token1).not.toEqual(token2);
-    expect(token2).not.toEqual(token3);
-  });
-
   it('shouldn\'t log in', function(){
 
     var token = userRepo.login('hobbit', 'qwerty');

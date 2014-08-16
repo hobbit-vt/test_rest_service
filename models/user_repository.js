@@ -1,3 +1,4 @@
+var Helper = require('../helper');
 /**
  * Constant, user list who have permission to system
  * @type {Array}
@@ -42,7 +43,7 @@ User.prototype = {
         }
         if(!token) {
 
-          token = this._generateToken();
+          token = Helper.generateId();
         }
         this._loggedUser[token] = name;
 
@@ -76,14 +77,6 @@ User.prototype = {
 
       delete this._loggedUser[token];
     }
-  },
-  /**
-   * Generates unique token
-   * @return {String} Unique token
-   */
-  _generateToken: function(){
-
-    return parseInt(6546548632165064 * Math.random()).toString(16);
   }
 };
 
