@@ -1,0 +1,14 @@
+<h3>Enter your credentials</h3>
+
+<form name="loginForm">
+  <label>
+    Name
+    <input type="text" name="name" ng-model="name" required>
+  </label>
+  <label>
+    Pass
+    <input type="text" name="phone" ng-model="pass" required>
+  </label>
+  <button ng-disabled="loginForm.$invalid" ng-click="login()">Add</button>
+</form>
+<span>{{flashMessage}}</span>

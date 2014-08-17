@@ -3,7 +3,17 @@
 <head>
   <title>Rest Service</title>
 </head>
-<body>
-  <h1>Hello, i'm service =)</h1>
+<body ng-app="restClient">
+  <h1>Hello, i'm client, enjoy =)</h1>
+
+  <div ng-view></div>
+
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-route.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular-resource.js"></script>
+
+  <script src="app/app.js"></script>
+  <script src="app/controllers.js"></script>
+  <script src="app/services.js"></script>
 </body>
 </html>

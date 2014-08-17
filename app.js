@@ -30,8 +30,8 @@ router.post('/login/:name/:pass', authController.login);
 router.post('/logout/:token', authController.logout);
 
 router.get('/storage/:token', storageController.findAll);
-router.get('/storage/:key/:token', storageController.findByKey);
+router.get('/storage/:key/:token', storageController.find);
 
-router.post('/storage/:token', storageController.add);
-router.put('/storage/:key/:token', storageController.update);
+router.post('/storage/:val/:token', storageController.add);
+router.put('/storage/:key/:val/:token', storageController.update);
 router.delete('/storage/:key/:token', storageController.delete);
