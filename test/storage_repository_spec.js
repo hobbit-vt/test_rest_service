@@ -31,14 +31,14 @@ describe('Storage respository', function(){
   it('should update object', function(){
 
     object2.val = 'new val2';
-    StorageRepo.update(object2.key, object2.val);
+    expect(StorageRepo.update(object2.key, object2.val)).toBeTruthy();
 
     expect(StorageRepo._objectHash[object2.key]).toEqual(object2.val);
   });
 
   it('should delete object', function(){
 
-    StorageRepo.delete(object2.key);
+    expect(StorageRepo.delete(object2.key)).toBeTruthy();
 
     expect(StorageRepo.findAll()).toEqual([object1]);
   });

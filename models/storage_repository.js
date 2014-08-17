@@ -65,10 +65,14 @@ Storage.prototype = {
    */
   update: function(key, val){
 
+    var result = false;
+
     if (this._objectHash[key]) {
 
-      this._objectHash[key] = val;      
+      this._objectHash[key] = val;
+      result = true;
     }
+    return result;
   },
   /**
    * Deletes storage's object
@@ -76,10 +80,14 @@ Storage.prototype = {
    */
   delete: function(key) {
 
+    result = false;
+
     if (this._objectHash[key]) {
 
       delete this._objectHash[key];
+      result = true;
     }
+    return result;
   }
 }
 
