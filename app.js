@@ -2,6 +2,8 @@ var HTTP            = require('http'),
     Router          = require('./router');
     StaticResolver  = require('./static_resolver');
 
+var port = process.argv[2] || 3000;
+
 var router = new Router();
 var staticResolver = new StaticResolver('public/');
 	
@@ -17,7 +19,7 @@ HTTP.createServer(function(request, response) {
       response.end();
     }
   }
-}).listen(3000);
+}).listen(port);
 
 
 var homeController    = require('./controllers/home'),
